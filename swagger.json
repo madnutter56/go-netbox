@@ -78067,7 +78067,11 @@
                     "$ref": "#/definitions/NestedIPAddress"
                 },
                 "nat_outside": {
-                    "$ref": "#/definitions/NestedIPAddress"
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NestedIPAddress"
+                    },
+                    "x-omitempty": true
                 },
                 "dns_name": {
                     "title": "DNS Name",
@@ -78205,8 +78209,11 @@
                     "x-nullable": true
                 },
                 "nat_outside": {
-                    "title": "Nat outside",
-                    "type": "string",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NestedIPAddress"
+                    },
+                    "x-omitempty": true,
                     "readOnly": true
                 },
                 "dns_name": {
